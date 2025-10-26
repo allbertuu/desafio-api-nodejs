@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node --env-file .env --watch src/server.ts",
+    "dev": "npm run services:up && node --env-file .env --watch src/server.ts",
     "db:seed": "node --env-file .env src/database/seed.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
     "pretest": "dotenv -e .env.test drizzle-kit migrate",
-    "test": "dotenv -e .env.test vitest run"
+    "test": "dotenv -e .env.test vitest run",
+    "services:up": "docker compose up -d"
   },
   "keywords": [],
   "author": "",
