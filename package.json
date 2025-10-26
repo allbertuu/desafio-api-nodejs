@@ -11,7 +11,8 @@
     "db:studio": "drizzle-kit studio",
     "pretest": "dotenv -e .env.test drizzle-kit migrate",
     "test": "dotenv -e .env.test vitest run",
-    "services:up": "docker compose up -d"
+    "services:up": "docker compose up -d",
+    "services:stop": "docker compose stop"
   },
   "keywords": [],
   "author": "",
